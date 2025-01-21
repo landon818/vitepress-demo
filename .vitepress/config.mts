@@ -5,16 +5,7 @@ export default defineConfig({
   title: '前端猫咖',
   description: '今天又敲了个寂寞, 老板都愁死了',
   base: '/vitepress-demo/',
-  head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/favicon.png',
-      },
-    ],
-  ],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/vitepress-demo/favicon.png' }]],
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
