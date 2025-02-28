@@ -1,6 +1,6 @@
-### Windows使用NodeJS版本管理工具fnm
+### Windows 使用 NodeJS 版本管理工具 fnm
 
-#### 一、fnm安装
+#### 一、fnm 安装
 
 打开 Powershell 控制台安装，使用 winget
 
@@ -8,23 +8,23 @@
 winget install Schniz.fnm
 ```
 
-目前fnm的最新版本是 v1.37.2，github 下载地址如下。
+目前 fnm 的最新版本是 v1.37.2，github 下载地址如下。
 
 ```url
 https://github.com/Schniz/fnm/releases
 ```
 
-安装好fnm之后，打开控制台（Powershell），查看版本
+安装好 fnm 之后，打开控制台（Powershell），查看版本
 
 ```
 fnm -V
-# 或者  
-fnm --version 
- 
+# 或者
+fnm --version
+
 // fnm 1.37.2
 ```
 
-#### 二、fnm环境变量配置
+#### 二、fnm 环境变量配置
 
 此时运行命令`fnm use`你会发现报错了
 
@@ -48,7 +48,7 @@ Check out our documentation for more information: https://fnm.vercel.app
 >
 > `%USERPROFILE%`: 表示用户目录，直接在文件管理的地址栏输入 `%USERPROFILE%`，然后回车
 >
-> WindowsPowerShell为新建的目录, 如果安装node后命令仍然无法识别，将文件夹名称改为PowerShell
+> WindowsPowerShell 为新建的目录, 如果安装 node 后命令仍然无法识别，将文件夹名称改为 PowerShell
 
 2、将下面的代码写入到上面的配置文件里面
 
@@ -77,7 +77,7 @@ FOR /f "tokens=*" %%z IN ('fnm env --use-on-cd') DO CALL %%z
 
 ##### Git Bash 配置
 
-进入用户目录 `%USERPROFILE%`，在git bash的配置文件 `.bash_profile` 添加下面的代码：
+进入用户目录 `%USERPROFILE%`，在 git bash 的配置文件 `.bash_profile` 添加下面的代码：
 
 ```bash
 eval $(fnm env | sed 1d)
@@ -88,9 +88,9 @@ if [[ -f .node-version || -f .nvmrc ]]; then
 fi
 ```
 
-##### VSCode终端配置
+##### VSCode 终端配置
 
-在配置文件settings.json里面添加如下代码：
+在配置文件 settings.json 里面添加如下代码：
 
 ```json
 "terminal.integrated.defaultProfile.windows": "Default Cmd",
@@ -102,17 +102,17 @@ fi
 }
 ```
 
-> 提示：VSCode设置更改后需重启方可生效
+> 提示：VSCode 设置更改后需重启方可生效
 
-##### 项目Git Hook配置
+##### 项目 Git Hook 配置
 
-如果在提交 git 时提示不能识别node，可以在 `.husky` 文件夹下的 `commit-msg` 、`pre-commit` 文件内添加以下命令：
+如果在提交 git 时提示不能识别 node，可以在 `.husky` 文件夹下的 `commit-msg` 、`pre-commit` 文件内添加以下命令：
 
 ```bash
 eval "$(fnm env)"
 ```
 
-#### 三、fnm使用（常用命令）
+#### 三、fnm 使用（常用命令）
 
 ```powershell
 fnm list-remote      			# 从列出所有远程Node.js版本 [aliases: ls-remote]
@@ -131,4 +131,4 @@ fnm help             			# 帮助 [aliases: -h]
 fnm -V							# 查看fnm版本[aliases: --version]
 ```
 
-> 提示：打印当前node版本 `node -v`
+> 提示：打印当前 node 版本 `node -v`
