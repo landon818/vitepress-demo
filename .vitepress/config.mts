@@ -47,10 +47,27 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'vue',
+        items: [{ text: 'vben5问题集合', link: '/vben-admin-v5-常见问题集合.md' }],
+      },
+      {
+        text: 'uniapp',
+        items: [],
+      },
+      {
+        text: '小游戏',
+        items: [],
+      },
+      {
+        text: 'react',
+        items: [{ text: 'react+umi问题集合', link: '/react+umi问题集合.md' }],
+      },
+      {
+        text: '日常随笔',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'git', link: '/git-github操作仓库失败.md' },
+          { text: 'nvm', link: '/nvm自动切换.md' },
+          { text: 'fnm', link: '/Windows使用NodeJS版本管理工具fnm.md' },
         ],
       },
     ],
